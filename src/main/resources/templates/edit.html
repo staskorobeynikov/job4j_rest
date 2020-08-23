@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Reports</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
+<body>
+<div class="container pt-2">
+    <div class="row pt-2">
+        <div class="card" style="width: 100%">
+            <div class="card-header" style="font-weight: bold; font-size: larger">
+                Форма для редактирования записи
+            </div>
+            <div class="card-body">
+                <form action="/reports/update" method="post">
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-3" for="login" style="font-weight: 900">Логин: </label>
+                        <div class="col-sm-5">
+                            <input type='text' class="form-control" name='login' id="login" th:value="${person.login}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-3" for="password" style="font-weight: 900">Пароль: </label>
+                        <div class="col-sm-5">
+                            <input type='text' class="form-control" name='password' id="password" th:value="${person.password}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <input type="hidden" name="id" th:value="${person.id}">
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-sm-3" style="font-weight: 900"></label>
+                        <div class="col-sm-5">
+                            <button type="submit" class="btn btn-dark">Изменить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -59,7 +59,7 @@ public class ReportController {
         int ids = 1;
         List<Person> persons = rest.exchange(
                 API,
-                HttpMethod.GET, null, new ParameterizedTypeReference<List<Person>>() {}
+                HttpMethod.GET, null, new ParameterizedTypeReference<List<Person>>() { }
         ).getBody();
         for (Person person : persons) {
             Report report = Report.of(ids, "First", person);

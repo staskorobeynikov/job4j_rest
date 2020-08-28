@@ -7,8 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+import ru.job4j.application.domain.Person;
 import ru.job4j.application.domain.Report;
-import ru.job4j.auth.domain.Person;
+
 
 import java.util.ArrayList;
 import java.util.List;

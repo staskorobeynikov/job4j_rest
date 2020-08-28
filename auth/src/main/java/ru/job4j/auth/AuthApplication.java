@@ -8,7 +8,10 @@ import org.springframework.context.annotation.Bean;
 
 import javax.sql.DataSource;
 
-@SpringBootApplication(exclude = SecurityAutoConfiguration.class, scanBasePackages = "ru.job4j.auth")
+@SpringBootApplication(
+        exclude = SecurityAutoConfiguration.class,
+        scanBasePackages = "ru.job4j.auth"
+)
 public class AuthApplication {
 
     public static void main(String[] args) {

@@ -21,11 +21,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>ru.job4j</groupId>
-            <artifactId>auth</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>

@@ -16,6 +16,13 @@ public class Person {
 
     private String password;
 
+    public static Person of(String login, String password) {
+        Person p = new Person();
+        p.login = login;
+        p.password = password;
+        return p;
+    }
+
     public int getId() {
         return id;
     }

@@ -7,7 +7,7 @@ services:
   - postgresql
 
 before_install:
-  - psql -c 'create database restfull;' -U postgres
+  - psql -c 'create database fullstack_auth;' -U postgres
 
 # используем режим обычного пользователя для сборки проекта.
 sudo: false
